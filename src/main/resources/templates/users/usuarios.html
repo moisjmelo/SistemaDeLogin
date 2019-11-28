@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>UsuariosApp</title>
+</head>
+<body>
+	<h1>Lista de Usuarios</h1>
+	<h3><a href="/cadastrarUsuario">Cadastrar Usuário</a></h3>
+	<h3><a href="/">Home</a></h3>
+	
+<div th:each="user : ${users}"> 
+<div class="row">
+				<p>
+					<span th:text="${user.name}"></span>
+				</p>
+				<p>
+					<span th:text="${user.email}"></span>
+				</p>
+				<p>
+					<span th:text="${user.phone}"></span>
+				</p>
+
+			</div> 
+
+</div>
+</body>
+</html>
